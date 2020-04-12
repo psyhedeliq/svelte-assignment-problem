@@ -1,15 +1,17 @@
 <script>
+  import CourseGoal from "./CourseGoal.svelte";
+
   let courseGoal = "";
   // $: console.log(courseGoal);
 
-  $: textColorRed = courseGoal.includes("!");
+  // $: textColorRed = courseGoal.includes("!");
 </script>
 
-<style>
+<!-- <style>
   .textRed {
     color: red;
   }
-</style>
+</style> -->
 
 <h1>Assignment</h1>
 
@@ -30,4 +32,5 @@
 
 <input type="text" bind:value={courseGoal} />
 
-<h1 class:textRed={textColorRed}>{courseGoal}</h1>
+<!-- <h1 class:textRed={textColorRed}>{courseGoal}</h1> -->
+<CourseGoal {courseGoal} />
