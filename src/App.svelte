@@ -1,7 +1,15 @@
 <script>
   let courseGoal = "";
   // $: console.log(courseGoal);
+
+  $: textColorRed = courseGoal.includes("!");
 </script>
+
+<style>
+  .textRed {
+    color: red;
+  }
+</style>
 
 <h1>Assignment</h1>
 
@@ -22,4 +30,4 @@
 
 <input type="text" bind:value={courseGoal} />
 
-<h1>{courseGoal}</h1>
+<h1 class:textRed={textColorRed}>{courseGoal}</h1>
