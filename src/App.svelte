@@ -1,6 +1,6 @@
 <script>
   let courseGoal = "";
-  $: console.log(courseGoal);
+  // $: console.log(courseGoal);
 </script>
 
 <h1>Assignment</h1>
@@ -21,3 +21,5 @@
 </ol>
 
 <input type="text" bind:value={courseGoal} />
+
+<h1>{courseGoal}</h1>
